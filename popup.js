@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   const termSelecter = document.getElementById("termSelecter");
 
   chrome.storage.sync.get(["term"], (res) => {
@@ -9,4 +9,4 @@
     const term = event.target.value;
     chrome.storage.sync.set({ term });
   });
-})();
+});

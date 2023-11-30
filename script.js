@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   const selectTerm = (term) => {
     const termSelecter = document.getElementsByName("search_term")[0];
     if (termSelecter && termSelecter.value === "" && term) {
@@ -10,4 +10,4 @@
   chrome.storage.sync.get(["term"], (res) => {
     selectTerm(res.term);
   });
-})();
+});
