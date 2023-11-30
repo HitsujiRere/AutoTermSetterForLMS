@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const handler = () => {
   const selectTerm = (term) => {
     const termSelecter = document.getElementsByName("search_term")[0];
     if (termSelecter && termSelecter.value === "" && term) {
@@ -10,4 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.sync.get(["term"], (res) => {
     selectTerm(res.term);
   });
-});
+};
+
+if (document.readyState !== "loading") {
+  handler();
+} else {
+  document.addEventListener("DOMContentLoaded", handler);
+}
