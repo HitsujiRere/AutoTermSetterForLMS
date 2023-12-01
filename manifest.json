@@ -1,7 +1,7 @@
 {
   "name": "Auto Term Setter for LMS",
   "manifest_version": 3,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "LMSコースの学期選択欄を自動で設定してくれます。",
   "homepage_url": "https://github.com/HitsujiRere/AutoTermSetterForLMS",
   "permissions": ["activeTab", "storage"],
