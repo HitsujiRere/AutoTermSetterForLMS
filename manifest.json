@@ -1,7 +1,7 @@
 {
   "name": "Auto Term Setter for LMS",
   "manifest_version": 3,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "LMSコースの学期選択欄を自動で設定してくれます。",
   "homepage_url": "https://github.com/HitsujiRere/AutoTermSetterForLMS",
   "permissions": ["activeTab", "storage"],
@@ -10,8 +10,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://acanthus.cis.kanazawa-u.ac.jp/base/lms-course/*"],
-      "js": ["script.js"]
+      "matches": ["https://acanthus.cis.kanazawa-u.ac.jp/base/lms-course/list"],
+      "js": ["lms-script.js"]
+    },
+    {
+      "matches": [
+        "https://eduweb.sta.kanazawa-u.ac.jp/portal/StudentApp/Regist/RegistList.aspx",
+        "https://eduweb.sta.kanazawa-u.ac.jp/Portal/StudentApp/Regist/RegistList.aspx"
+      ],
+      "js": ["portal-script.js"]
     }
   ]
 }
